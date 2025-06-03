@@ -1,0 +1,209 @@
+/* styles.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  background: url('img/cam/image00021.jpg') center center / cover no-repeat fixed;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* ---------- NAVBAR ---------- */
+
+.navbar {
+  position: fixed;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  background: transparent;
+  z-index: 1000;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 0 40px;
+  height: 60px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  position: relative;
+}
+
+.nav-links a:hover {
+  opacity: 0.7;
+}
+
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: white;
+}
+
+/* hamburger icon (hidden on desktop) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background: white;
+  transition: background 0.3s;
+}
+
+/* ---------- PAGE CONTENT (unchanged) ---------- */
+
+.content {
+  padding-top: 120px;
+  display: flex;
+  justify-content: center;
+}
+
+.album-section {
+  display: flex;
+  gap: 60px;
+  max-width: 1000px;
+  padding: 40px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.embed-wrapper {
+  flex-shrink: 0;
+}
+
+.embed-text {
+  max-width: 400px;
+  font-family: 'Space Grotesk', sans-serif;
+  padding: 20px;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.embed-text h1 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.embed-text p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* email section layout */
+.email-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.email-text {
+  max-width: 400px;
+  padding: 20px;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+  text-align: left;
+}
+
+.email-text h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.email-text p {
+  font-family: 'EB Garamond', serif;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.email-form {
+  display: flex;
+  gap: 10px;
+}
+
+.email-form input[type="email"] {
+  padding: 10px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  flex: 1;
+}
+
+.email-form button {
+  padding: 10px 20px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 16px;
+  background-color: #ffffffaa;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: black;
+  transition: background-color 0.3s ease;
+}
+
+.email-form button:hover {
+  background-color: #ffffff;
+}
+
+/* ---------- MOBILE NAV ONLY ---------- */
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  .nav-links.mobile-visible {
+    display: flex;
+  }
+
+  .nav-left {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 20px;
+  }
+}

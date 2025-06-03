@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>georges — news</title>
+  <link rel="stylesheet" href="styles4.css" />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+  <div class="nav-left">
+    <a class="logo" href="index.html">georges</a>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <nav class="nav-links" id="mobileNav">
+      <a href="#" class="active">news</a>
+      <a href="merch.html">merch</a>
+      <a href="listen.html">listen</a>
+      <a href="watch.html">watch</a>
+      <a href="contact.html">contact</a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('mobileNav').classList.toggle('mobile-visible');
+  }
+</script>
+
+  <div class="news-container">
+    <div class="news-article">
+      <h1>out now:</h1>
+      <h2>it's like an 'i love you' but cooler</h2>
+      <p>a mirror shatters, and from the shards emerges <i>it's like an 'i love you' but cooler</i>, the debut single by georges, an artist pulling sound from the edge of rupture. sharp, erratic, and emotionally loaded, the track refuses to settle or behave.</p>
+      <p>across six relentless minutes, georges fractures the architecture of deconstructed club and noise, building a world that folds in on itself, unfolds again, and never lands where it started. the track consists no verses, no choruses, but goes through multiple phases throughout its runtime.</p>
+      <p>it's music with no safety net: volatile and intricate. <a href="listen.html">visit the listen page</a> or stream it below:</p>
+      <br>
+      <iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/track=1996974021/size=large/bgcol=333333/linkcol=0f91ff/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://qeorqes.bandcamp.com/track/its-like-an-i-love-you-but-cooler">it&#39;s like an &#39;i love you&#39; but cooler by georges</a></iframe>
+      <br>
+      <span class="news-date"><i>posted by georges, </i>may 5, 2025</span>
+    </div>
+  </div>
+
+
+</body>
+</html>
