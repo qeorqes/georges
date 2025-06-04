@@ -1,18 +1,19 @@
+/* reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* background */
 body {
   font-family: 'Helvetica Neue', sans-serif;
-  background: url('img/cam/image00021.jpg') center center / cover no-repeat fixed;
+  background: url('img/cam/image00002.jpg') center center / cover no-repeat fixed;
   color: white;
   overflow-x: hidden;
 }
 
-/* ---------- NAVBAR ---------- */
-
+/* navbar container */
 .navbar {
   position: fixed;
   top: 20px;
@@ -22,6 +23,7 @@ body {
   z-index: 1000;
 }
 
+/* group logo, burger, links */
 .nav-left {
   display: flex;
   align-items: center;
@@ -30,6 +32,7 @@ body {
   height: 60px;
 }
 
+/* logo */
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
@@ -37,6 +40,7 @@ body {
   text-decoration: none;
 }
 
+/* nav-links desktop */
 .nav-links {
   display: flex;
   gap: 30px;
@@ -64,6 +68,7 @@ body {
   background: white;
 }
 
+/* hamburger hidden on desktop */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -78,95 +83,73 @@ body {
   transition: background 0.3s;
 }
 
-
-.subscribe-container {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  height: 85vh;
-  padding: 0 20px;
-}
-
-.subscribe-box {
-  max-width: 400px;
-  padding: 20px;
-  text-align: center;
-  border-radius: 12px;
-}
-
-.subscribe-box h1 {
-  font-size: 24px;
-  margin-bottom: 10px;
-  font-family: 'Space Grotesk', sans-serif;
-}
-
-.subscribe-box p {
-  font-family: 'EB Garamond', serif;
-  font-size: 18px;
-  margin-bottom: 20px;
-}
-
-.email-form {
+/* news content */
+.news-container {
+  padding: 140px 20px 100px;
+  max-width: 1000px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 40px;
 }
 
-.email-form input[type="email"] {
-  font-family: 'EB Garamond', serif;
-  padding: 10px;
-  font-size: 16px;
-  border-radius: 4px;
-  border: none;
-}
-
-.email-form button {
-  font-family: 'EB Garamond', serif;
-  padding: 10px;
-  font-size: 16px;
-  background-color: #ffffffaa;
-  color: black;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-.email-form button:hover {
-  background-color: #fff;
-}
-
-.social-icons {
+.news-article {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  height:500px;
+  border-radius: 8px;
   display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px 0;
+  flex-direction: column;
 }
 
-.social-icons a {
-  text-decoration: none;
-  transition: opacity 0.2s ease;
+.news-article h1 {
+  font-size: 1.6em;
+  margin-bottom: 10px;
 }
 
-.social-icons img {
-  width: 30px;
-  height: 30px;
-  filter: brightness(0) invert(1);
-  transition: opacity 0.2s ease;
-}
-.social-icons img:hover {
-  opacity: 0.7;
+.news-article h2 {
+  font-size: 1.4em;
+  margin-bottom: 10px;
 }
 
-/* ---------- MOBILE NAV ONLY ---------- */
+.news-article p {
+  font-size: 1em;
+  line-height: 1.6;
+  font-family: 'EB Garamond', serif;
+  margin-bottom: 1em;
+}
+
+.news-article a {
+  color: white;
+  text-decoration: underline;
+}
+
+.news-date {
+  margin-top: auto;
+  align-self: flex-end;
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+
+/* iframe embed */
+iframe {
+  width: 100%;
+  height: 120px;
+  border: 0;
+}
+
+/* mobile tweaks */
 @media (max-width: 768px) {
-  
+  /* fix background on iOS */
   body {
     background-attachment: scroll;
   }
 
-  
+  /* show hamburger, hide links by default */
   .hamburger {
     display: flex;
   }
+
   .nav-links {
     display: none;
     flex-direction: column;
@@ -174,15 +157,33 @@ body {
     gap: 15px;
     margin-top: 10px;
   }
+
   .nav-links.mobile-visible {
     display: flex;
   }
 
-  
+  /* stack nav-left vertically */
   .nav-left {
     flex-direction: column;
     align-items: flex-start;
     padding: 20px;
     gap: 20px;
+  }
+
+  /* adjust text sizes */
+  .news-container {
+    padding-top: 160px;
+  }
+
+  .news-article h1 {
+    font-size: 1.4em;
+  }
+
+  .news-article h2 {
+    font-size: 1.2em;
+  }
+
+  .news-article p {
+    font-size: 0.95em;
   }
 }

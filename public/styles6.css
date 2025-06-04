@@ -1,3 +1,4 @@
+/* styles2.css */
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +7,7 @@
 
 body {
   font-family: 'Helvetica Neue', sans-serif;
-  background: url('img/cam/image00021.jpg') center center / cover no-repeat fixed;
+  background: url('img/cam/image00028.jpg') center center / cover no-repeat fixed;
   color: white;
   overflow-x: hidden;
 }
@@ -57,13 +58,14 @@ body {
 .nav-links a.active::after {
   content: "";
   position: absolute;
-  bottom: -4px;
   left: 0;
+  bottom: -4px;
   width: 100%;
   height: 2px;
   background: white;
 }
 
+/* hamburger icon (hidden on desktop) */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -78,95 +80,56 @@ body {
   transition: background 0.3s;
 }
 
+/* ---------- PAGE CONTENT (unchanged) ---------- */
 
-.subscribe-container {
+.page-content {
   display: flex;
-  align-items: flex-end;
   justify-content: center;
-  height: 85vh;
-  padding: 0 20px;
+  align-items: center;
+  height: 100vh;
+  padding-top: 60px;
 }
 
-.subscribe-box {
+.embed-section {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.embed-text {
   max-width: 400px;
   padding: 20px;
-  text-align: center;
-  border-radius: 12px;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 }
 
-.subscribe-box h1 {
+.embed-text h1 {
+  font-family: 'Helvetica Neue', sans-serif;
   font-size: 24px;
-  margin-bottom: 10px;
-  font-family: 'Space Grotesk', sans-serif;
+  margin-bottom: 12px;
 }
 
-.subscribe-box p {
+.embed-text p {
   font-family: 'EB Garamond', serif;
   font-size: 18px;
-  margin-bottom: 20px;
+  line-height: 1.5;
 }
 
-.email-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.email-form input[type="email"] {
-  font-family: 'EB Garamond', serif;
-  padding: 10px;
-  font-size: 16px;
-  border-radius: 4px;
-  border: none;
-}
-
-.email-form button {
-  font-family: 'EB Garamond', serif;
-  padding: 10px;
-  font-size: 16px;
-  background-color: #ffffffaa;
-  color: black;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-.email-form button:hover {
-  background-color: #fff;
-}
-
-.social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px 0;
-}
-
-.social-icons a {
-  text-decoration: none;
-  transition: opacity 0.2s ease;
-}
-
-.social-icons img {
-  width: 30px;
-  height: 30px;
-  filter: brightness(0) invert(1);
-  transition: opacity 0.2s ease;
-}
-.social-icons img:hover {
-  opacity: 0.7;
+.embed-text a {
+  color: #fff;
+  text-decoration: underline;
 }
 
 /* ---------- MOBILE NAV ONLY ---------- */
 @media (max-width: 768px) {
-  
   body {
     background-attachment: scroll;
   }
 
-  
   .hamburger {
     display: flex;
   }
+
   .nav-links {
     display: none;
     flex-direction: column;
@@ -174,11 +137,11 @@ body {
     gap: 15px;
     margin-top: 10px;
   }
+
   .nav-links.mobile-visible {
     display: flex;
   }
 
-  
   .nav-left {
     flex-direction: column;
     align-items: flex-start;
