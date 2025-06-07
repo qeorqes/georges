@@ -20,7 +20,7 @@
         body: JSON.stringify({ email })
       })
       .then(res => res.text())
-      .then(msg => alert('subscribed 💌'))
+      .then(msg => alert('subscribed 💌'), console.log(email))
       .catch(err => alert('failed to subscribe'));
     }
     function toggleMenu() {
